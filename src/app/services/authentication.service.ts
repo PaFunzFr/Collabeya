@@ -95,8 +95,7 @@ export class AuthenticationService {
         email,
         password
       );
-      this.router.navigate(['/']);
-      this.isAuthenticated.set(true);
+      this.checkAuthStatus();
       return userCredential.user;
     } catch (error) {
       throw error;
@@ -108,8 +107,7 @@ export class AuthenticationService {
       const result = await signInWithPopup(this.auth, this.provider);
       const user = result.user;
       if (user) {
-        this.isAuthenticated.set(true);
-        this.router.navigate(['/']);
+        this.checkAuthStatus();
 
         await this.usersService.addUser(user.uid, {
           name: user.displayName ?? 'Unknown',
