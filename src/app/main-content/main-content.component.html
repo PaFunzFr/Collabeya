@@ -5,8 +5,16 @@
     <app-thread [class.hidden]="!signalService.showThread()"></app-thread>
 </section>
 
-<nav class="workspace-btn" (click)="toggleWorkspaceMenu()" (mouseenter)="workspaceHovered = true" (mouseleave)="workspaceHovered = false">
-    <h5 [style.color]="workspaceHovered ? 'var(--col-font-btn-hover)' : ''">{{ workspaceStatus }} Workspace Menu</h5>
+<nav
+    class="workspace-btn"
+    (click)="toggleWorkspaceMenu()" 
+    (mouseenter)="workspaceHovered = true"
+    (mouseleave)="workspaceHovered = false">
+    <h5 [style.color]="workspaceHovered
+        ? 'var(--col-font-btn-hover)'
+        : ''">
+        {{ workspaceStatus }} Workspace Menu
+    </h5>
     <img [src]="getWorkspaceIcon()" alt="">
 </nav>
 

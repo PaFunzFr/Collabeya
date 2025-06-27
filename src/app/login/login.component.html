@@ -1,11 +1,11 @@
 <header class="login-header">
   <div class="header-logo" routerLink="/login">
-    <img src="./assets/icons/general/dabubble_logo.svg" alt="" />
+    <img src="./assets/icons/general/collabeya_logo.png" alt="" />
     <img
       [src]="
-        './assets/icons/general/dabubble_logo_title_' +
+        './assets/icons/general/collabeya_logo_title_' +
         signalService.themeColorMain() +
-        '.svg'
+        '.png'
       "
       alt=""
     />
@@ -13,7 +13,7 @@
 
   @if (signalService.isLoginDialog()) {
   <div class="register-box">
-    <p>New at DABubble?</p>
+    <p>New at CollaBeya?</p>
     <a class="register" (click)="signalService.showRegisterDialog()"
       >Register</a
     >
@@ -26,7 +26,7 @@
   <app-login-dialog></app-login-dialog>
 
   <div class="register-box-mobile">
-    <p>New at DABubble?</p>
+    <p>New at CollaBeya?</p>
     <a class="register" (click)="signalService.showRegisterDialog()"
       >Register</a
     >

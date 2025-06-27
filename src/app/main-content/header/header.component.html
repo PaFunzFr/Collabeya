@@ -1,8 +1,8 @@
 <header>
 
     <div class="header-logo">
-        <img src="./assets/icons/general/dabubble_logo.svg" alt="">
-        <img [src]="'./assets/icons/general/dabubble_logo_title_'+ signalService.themeColorMain() +'.svg'" alt="">
+        <img src="./assets/icons/general/collabeya_logo.png" alt="">
+        <img [src]="'./assets/icons/general/collabeya_logo_title_'+ signalService.themeColorMain() +'.png'" alt="">
     </div>
 
     <app-search-app></app-search-app>
@@ -88,7 +88,7 @@
                 <div class="mode-container"
                     [style.backgroundColor]="isDarkMode()
                         ? 'rgb(80, 133, 246)'
-                        :'rgb(246, 188, 80)'">
+                        : 'rgb(246, 188, 80)'">
                     <img 
                         (click)="toggleDarkMode()"
                         [class]="isDarkMode() ? 'mode-dark':'mode-light'" 
